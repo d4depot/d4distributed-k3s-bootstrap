@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/d4depot/d4distributed-k3s-bootstrap.git
-    targetRevision: HEAD
+    targetRevision: 0.1.0
     chart: k3s-bootstrap
   syncPolicy: 
     automated:
@@ -16,3 +16,4 @@ spec:
       - CreateNamespace=true
   destination:
     server: https://kubernetes.default.svc
+    namespace: default
