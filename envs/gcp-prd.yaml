@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/d4depot/d4distributed-k3s-bootstrap.git
     targetRevision: HEAD
-    path: /
+    chart: k3s-bootstrap
   syncPolicy: 
     automated:
       selfHeal: true
