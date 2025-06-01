@@ -28,7 +28,7 @@ helm install argocd argo/argo-cd -n argocd --create-namespace --set server.extra
 ## BOOTSTRAP FROM ARGOCD:
 To bootstrap your cluster, run the following command:
 ```
-helm install -f ./values.yaml kube-bootstrap .
+kubectl apply -f https://github.com/d4depot/d4distributed-k3s-bootstrap/blob/main/envs/gcp-prd.yaml
 ```
 
 ## CONNECT TO ARGOCD:
