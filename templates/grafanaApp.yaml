@@ -7,13 +7,13 @@ spec:
   project: default
   source:
     repoURL: https://github.com/d4depot/d4distributed-k3s-support.git
-    targetRevision: HEAD
     path: ./grafana/
   syncPolicy: 
     automated:
+      prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: grafana
