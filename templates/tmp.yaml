@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rootApp
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/d4depot/d4distributed-k3s-support.git
+    targetRevision: HEAD
+    path: traefik
+  syncPolicy: 
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
