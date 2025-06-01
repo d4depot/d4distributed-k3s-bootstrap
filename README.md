@@ -28,14 +28,14 @@ helm install argocd argo/argo-cd -n argocd --create-namespace --set server.extra
 ## BOOTSTRAP FROM ARGOCD:
 To bootstrap your cluster, run the following command:
 ```
-kubectl apply -f https://github.com/d4depot/d4distributed-k3s-bootstrap/blob/main/envs/gcp-prd.yaml
+kubectl apply -f https://raw.githubusercontent.com/d4depot/d4distributed-k3s-bootstrap/refs/heads/main/envs/gcp-prd.yaml
 ```
 
 ## CONNECT TO ARGOCD:
 To connect to argocd, the following commands may be usefull:
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-kubectl port-forward --address 192.168.68.108 service/argocd-server -n argocd 8080:80
+kubectl port-forward --address 192.168.68.108 service/argocd-server -n argocd 8000:80
 ```
 
 ## UNINSTALL K3S:
