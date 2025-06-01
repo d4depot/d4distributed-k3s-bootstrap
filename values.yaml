@@ -1,6 +1,0 @@
-applications:
-  - repo: abc
-    path: dev
-  - repo: def
-    path: ghi
-        
