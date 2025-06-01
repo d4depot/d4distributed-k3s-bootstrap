@@ -7,7 +7,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/d4depot/d4distributed-k3s-support.git
-    path: traefik/
+    targetRevision: HEAD
+    path: traefik
   syncPolicy: 
     automated:
       selfHeal: true
